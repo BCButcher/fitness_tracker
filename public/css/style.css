@@ -1,0 +1,270 @@
+body::after {
+    content: "";
+    background-image: url(https://cdn.pixabay.com/photo/2019/07/10/22/19/gym-4329688_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#routineList {
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#createRoutine {
+    height: 200px;
+    width: 300px;
+    margin-top: 15px;
+    float: right;
+    border-radius: 18px;
+}
+
+#loadRoutine {
+    height: 200px;
+    width: 300px;
+    margin-top: 15px;
+    float: left;
+    border-radius: 18px;
+}
+
+#getInShape {
+    padding-bottom: 0px;
+    background-color: purple;
+}
+
+#createRoutineText {
+    margin-top: 200px;
+    margin-left: 325px;
+    font-family: Nothing you could do;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+
+#loadRoutineText {
+    margin-top: 200px;
+    margin-right: 325px;
+    font-family: Nothing you could do;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+
+.holder {
+    position: relative;
+    width: 2000px;
+    height: 50px;
+}
+
+.circle {
+    position: absolute;
+    width: 1285px;
+    height: 20px;
+    background: radial-gradient(16px, transparent, transparent 4px, black 4px, black 10px, transparent 11px);
+    background-size: 30px 40px;
+    -webkit-animation: myfirst 5s 2;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate;
+    /* Safari 4.0 - 8.0 */
+    animation: myfirst 5s 2;
+    animation-direction: alternate;
+}
+
+.circle2 {
+    /* Offset to make squigglies line up */
+    top: 20px;
+    left: 15px;
+    background-position: 0px -20px;
+    -webkit-animation: mysecond 5s 2;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate;
+    /* Safari 4.0 - 8.0 */
+    animation: mysecond 5s 2;
+    animation-direction: alternate;
+}
+
+@keyframes myfirst {
+    0% {
+        left: 0px;
+        bottom: 30px;
+    }
+    25% {
+        left: 30px;
+        bottom: 0px;
+    }
+    50% {
+        left: 0px;
+        bottom: 30px;
+    }
+    75% {
+        left: 30px;
+        bottom: 0px;
+    }
+    100% {
+        left: 0px;
+        bottom: 30px;
+    }
+}
+
+@keyframes mysecond {
+    0% {
+        right: 30px;
+        bottom: 0px;
+    }
+    25% {
+        right: 0px;
+        bottom: 30px;
+    }
+    50% {
+        right: 30px;
+        bottom: 0px;
+    }
+    75% {
+        right: 0px;
+        bottom: 30px;
+    }
+    100% {
+        left: 30px;
+        bottom: 0px;
+    }
+}
+
+#createRoutine {
+    position: relative;
+    -webkit-animation: myOrbit 2s linear;
+    -moz-animation: myOrbit 2s linear;
+    -o-animation: myOrbit 2s linear;
+    animation: myOrbit 2s linear;
+}
+
+@-webkit-keyframes myOrbit {
+    from {
+        -webkit-transform: rotate(0deg) translateX(1000px) rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg) translateX(0px) rotate(-360deg);
+    }
+}
+
+@-moz-keyframes myOrbit {
+    from {
+        -moz-transform: rotate(0deg) translateX(1000px) rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg) translateX(0px) rotate(-360deg);
+    }
+}
+
+@-o-keyframes myOrbit {
+    from {
+        -o-transform: rotate(0deg) translateX(1000px) rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg) translateX(0px) rotate(-360deg);
+    }
+}
+
+@keyframes myOrbit {
+    from {
+        transform: rotate(0deg) translateX(900px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(0px) rotate(-360deg);
+    }
+}
+
+#loadRoutine {
+    position: relative;
+    -webkit-animation: myOrbit2 2s linear;
+    -moz-animation: myOrbit2 2s linear;
+    -o-animation: myOrbit2 2s linear;
+    animation: myOrbit2 2s linear;
+}
+
+@-webkit-keyframes myOrbit2 {
+    from {
+        -webkit-transform: rotate(0deg) translateX(-1000px) rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg) translateX(0px) rotate(360deg);
+    }
+}
+
+@-moz-keyframes myOrbit2 {
+    from {
+        -moz-transform: rotate(0deg) translateX(-1000px) rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(-360deg) translateX(0px) rotate(360deg);
+    }
+}
+
+@-o-keyframes myOrbit2 {
+    from {
+        -o-transform: rotate(0deg) translateX(-700px) rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(-360deg) translateX(0px) rotate(360deg);
+    }
+}
+
+@keyframes myOrbit2 {
+    from {
+        transform: rotate(0deg) translateX(-1500px) rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg) translateX(0px) rotate(360deg);
+    }
+}
+
+#createRoutineText {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.2s steps(40, end);
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 50%
+    }
+}
+
+#loadRoutineText {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end);
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 50%
+    }
+}
+
+#routineList {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end);
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 50%
+    }
+}
