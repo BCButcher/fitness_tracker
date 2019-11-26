@@ -1,0 +1,23 @@
+{
+  "name": "fitness_tracker",
+  "version": "1.0.1",
+  "description": "Fitness Tracker (MongoDB Homework)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BCButcher/fitness_tracker.git"
+  },
+  "author": "Brian C Butcher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BCButcher/fitness_tracker/issues"
+  },
+  "homepage": "https://github.com/BCButcher/fitness_tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.12"
+  }
+}
