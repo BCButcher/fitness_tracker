@@ -4,7 +4,10 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const db = require("../models");
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitness_tracker', { useNewUrlParser: true }, { useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitness_tracker', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 router.get("/", (req, res) => {
     res.status(200).sendFile("index.html");
