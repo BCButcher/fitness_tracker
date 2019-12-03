@@ -1,3 +1,5 @@
+/* creates the opaque background */
+
 body::after {
     content: "";
     background-image: url(https://cdn.pixabay.com/photo/2019/07/10/22/19/gym-4329688_960_720.jpg);
@@ -12,13 +14,16 @@ body::after {
     z-index: -1;
 }
 
+
+/*  */
+
 #routineList {
     color: black;
     font-weight: bold;
     font-size: 25px;
 }
 
-#createRoutine {
+#createRoutineImg {
     height: 200px;
     width: 300px;
     margin-top: 15px;
@@ -26,7 +31,7 @@ body::after {
     border-radius: 18px;
 }
 
-#loadRoutine {
+#loadRoutineImg {
     height: 200px;
     width: 300px;
     margin-top: 15px;
@@ -39,104 +44,35 @@ body::after {
     background-color: purple;
 }
 
-#createRoutineText {
+#createRoutine {
     margin-top: 200px;
     margin-left: 325px;
     font-family: Nothing you could do;
     font-weight: bold;
     font-size: 25px;
-    color: white;
+    color: black;
 }
 
-#loadRoutineText {
+#createRoutine:hover {
+    color: chartreuse;
+    font-weight: bold;
+}
+
+#loadRoutine {
     margin-top: 200px;
     margin-right: 325px;
     font-family: Nothing you could do;
     font-weight: bold;
     font-size: 25px;
-    color: white;
+    color: black;
 }
 
-.holder {
-    position: relative;
-    width: 2000px;
-    height: 50px;
+#loadRoutine:hover {
+    color: chartreuse;
+    text-shadow: cyan 5px, 10px, 0px, 0px;
 }
 
-.circle {
-    position: absolute;
-    width: 1285px;
-    height: 20px;
-    background: radial-gradient(16px, transparent, transparent 4px, black 4px, black 10px, transparent 11px);
-    background-size: 30px 40px;
-    -webkit-animation: myfirst 5s 2;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-direction: alternate;
-    /* Safari 4.0 - 8.0 */
-    animation: myfirst 5s 2;
-    animation-direction: alternate;
-}
-
-.circle2 {
-    /* Offset to make squigglies line up */
-    top: 20px;
-    left: 15px;
-    background-position: 0px -20px;
-    -webkit-animation: mysecond 5s 2;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-direction: alternate;
-    /* Safari 4.0 - 8.0 */
-    animation: mysecond 5s 2;
-    animation-direction: alternate;
-}
-
-@keyframes myfirst {
-    0% {
-        left: 0px;
-        bottom: 30px;
-    }
-    25% {
-        left: 30px;
-        bottom: 0px;
-    }
-    50% {
-        left: 0px;
-        bottom: 30px;
-    }
-    75% {
-        left: 30px;
-        bottom: 0px;
-    }
-    100% {
-        left: 0px;
-        bottom: 30px;
-    }
-}
-
-@keyframes mysecond {
-    0% {
-        right: 30px;
-        bottom: 0px;
-    }
-    25% {
-        right: 0px;
-        bottom: 30px;
-    }
-    50% {
-        right: 30px;
-        bottom: 0px;
-    }
-    75% {
-        right: 0px;
-        bottom: 30px;
-    }
-    100% {
-        left: 30px;
-        bottom: 0px;
-    }
-}
-
-#createRoutine {
+#createRoutineImg {
     position: relative;
     -webkit-animation: myOrbit 2s linear;
     -moz-animation: myOrbit 2s linear;
@@ -180,7 +116,7 @@ body::after {
     }
 }
 
-#loadRoutine {
+#loadRoutineImg {
     position: relative;
     -webkit-animation: myOrbit2 2s linear;
     -moz-animation: myOrbit2 2s linear;
