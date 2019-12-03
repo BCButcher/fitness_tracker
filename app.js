@@ -11,5 +11,5 @@ var routes = require("./controller/controller.js");
 app.use(routes);
 
 app.listen(PORT, () => {
-    console.log(`App running on port ${PORT}!`)
+    console.log(`Program running on port ${PORT}!`)
 });
