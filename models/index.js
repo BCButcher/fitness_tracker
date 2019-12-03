@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.set('useCreateIndex', true);
 const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
@@ -20,7 +21,7 @@ const exerciseSchema = new Schema({
     },
     muscleGroup: {
         type: String,
-        required: true,
+        required: true
     },
     reps: {
         type: Number,
