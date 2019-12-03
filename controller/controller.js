@@ -1,10 +1,15 @@
 const express = require("express");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const router = express.Router();
 const db = require("../models");
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitness_tracker', { useNewUrlParser: true }, { useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/fitness', {
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+    })
+    .then(() => console.log('DB Connected!'))
+    .catch(err => console.error(err));
 
 router.get("/", (req, res) => {
     res.status(200).sendFile("index.html");
@@ -23,7 +28,7 @@ router.get("/populate/:workoutID", async(req, res) => {
 router.get("/api/workouts", async(req, res) => {
     let dbRoutine = await db.Workout.find({}).populate("exercises")
     res.json(dbRoutine);
-});
+})
 
 router.post("/submit", async(req, res) => {
     const newRoutine = new db.Workout(req.body)
@@ -38,7 +43,6 @@ router.post("/submit", async(req, res) => {
 router.post("/add", async(req, res) => {
     let exerciseInfo = {
         name: req.body.name,
-        muscleGroup: req.body.muscleGroup,
         reps: req.body.reps
     }
     const newExercise = new db.Exercise(exerciseInfo)
@@ -46,7 +50,7 @@ router.post("/add", async(req, res) => {
         let addExercise = await db.Exercise.create(newExercise)
         try {
             let dbRoutine = await db.Workout.findOneAndUpdate({ _id: req.body.workout }, { $push: { exercises: addExercise._id } }, { new: true })
-            res.status(200).send(dbRoutine)
+            res.status(200).send(dbRoutine);
         } catch (err) {
             res.status(200).send(err);
         }
